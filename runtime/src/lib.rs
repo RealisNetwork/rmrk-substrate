@@ -353,7 +353,7 @@ impl pallet_rmrk_equip::Config for Runtime {
 impl pallet_uniques::Config for Runtime {
 	type Event = Event;
 	type ClassId = u32;
-	type InstanceId = u32;
+	type InstanceId = u128;
 	type Currency = Balances;
 	type ForceOrigin = frame_system::EnsureRoot<AccountId>;
 	type ClassDeposit = ClassDeposit;

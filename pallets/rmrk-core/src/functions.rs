@@ -279,7 +279,7 @@ where
 
 		// Prevent minting when next NFT id is greater than the collection max.
 		if let Some(max) = collection.max {
-			ensure!(nft_id < max, Error::<T>::CollectionFullOrLocked);
+			ensure!(nft_id < max.into(), Error::<T>::CollectionFullOrLocked);
 		}
 
 		let mut royalty: Option<RoyaltyInfo::<T::AccountId>> = None;
